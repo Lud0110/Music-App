@@ -1,0 +1,26 @@
+.home {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.home__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.home__empty {
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
