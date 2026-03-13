@@ -1,0 +1,40 @@
+.categories {
+    padding: 3rem 2rem 1rem;
+    text-align: center;
+}
+
+.categories__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.categories__filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.categories__btn {
+    background-color: #282828;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.categories__btn:hover {
+    background-color: #1db954;
+    color: #000000;
+}
+
+.categories__btn--active {
+    background-color: #1db954;
+    color: #000000;
+    font-weight: 700;
+}
