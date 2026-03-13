@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CategoryFilter from "./components/CategoryFilter";
 import Home from "./pages/Home";
+import ArtistSection from "./components/ArtistSection";
 
 function App() {
   const[category, setCategory] = useState('Todos');
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <CategoryFilter onCategoryChange={setCategory} />
       <Home category={category} />
+      <ArtistSection />
     </div>
   );
 }
