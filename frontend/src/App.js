@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import CategoryFilter from "./components/CategoryFilter";
 import Home from "./pages/Home";
 import ArtistSection from "./components/ArtistSection";
+import Footer from "./components/Footer";
 
 function App() {
   const[category, setCategory] = useState('Todos');
@@ -16,6 +17,7 @@ function App() {
       <CategoryFilter onCategoryChange={setCategory} />
       <Home category={category} />
       <ArtistSection />
+      <Footer />
     </div>
   );
 }
