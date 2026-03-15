@@ -46,3 +46,13 @@
     background-color: #17a349;
     transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+}
