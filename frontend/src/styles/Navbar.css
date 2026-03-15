@@ -54,3 +54,31 @@
 .btn--login:hover {
     background-color: #17a349;
 }
+
+.navbar__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__username {
+  color: #1db954;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn--logout {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn--logout:hover {
+  background-color: #ffffff;
+  color: #000000;
+}

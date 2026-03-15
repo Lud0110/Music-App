@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/Navbar.css';
 
-function Navbar() {
+function Navbar({ user, onLoginClick, onLogout }) {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
@@ -14,7 +14,14 @@ function Navbar() {
                 <li><a href="artistas">Artistas</a></li>
             </ul>
             <div className="navbar__auth">
-                <button className="btn btn--login">Iniciar sesion</button>
+                {user ? (
+                    <div className="navbar__user">
+                        <span className="navbar__username">Hola, {user.username}</span>
+                        <button className="btn btn--logout" onClick={onLogout}>Salir</button>
+                    </div>
+                ) : (
+                    <button className="btn btn--login" onClick={onLoginClick}>Iniciar sesion</button>
+                )}
             </div>
         </nav>
     );
