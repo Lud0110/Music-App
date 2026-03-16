@@ -37,3 +37,26 @@
         grid-template-columns: 1fr;
     }
 }
+
+.home__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.home__more-btn {
+    background-color: transparent;
+    color: #1db954;
+    border: 2px solid #1db954;
+    padding: 0.7rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.home__more-btn:hover {
+    background-color: #1db954;
+    color: #000000;
+}

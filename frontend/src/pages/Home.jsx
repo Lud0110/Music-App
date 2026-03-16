@@ -3,12 +3,16 @@ import SongCard from '../components/SongCard';
 import { getSongs } from '../services/api';
 import '../styles/Home.css';
 
+const ITEMS_PER_PAGE = 6;
+
 function Home({ category }) {
     const [songs, setSongs] = useState([]);
+    const [visible, setVisible] = useState(ITEMS_PER_PAGE);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setLoading(true);
+        setVisible(ITEMS_PER_PAGE);
         getSongs(category)
             .then((data) => {
                 setSongs(data);
@@ -28,8 +32,9 @@ function Home({ category }) {
             {songs.length === 0 ? (
                 <p className="home__empty">No hay canciones en esta categoria</p>
             ) : (
+                <>
                 <div className="home__grid">
-                    {songs.map((song) => (
+                    {songs.slice(0, visible).map((song) => (
                         <SongCard
                             key={song.id}
                             song={{
@@ -42,6 +47,17 @@ function Home({ category }) {
                         />
                     ))}
                 </div>
+                {visible < songs.length && (
+                    <div className="home__more">
+                        <button
+                            className="home__more-btn"
+                            onClick={() => setVisible(visible + ITEMS_PER_PAGE)}
+                        >
+                            Ver mas
+                        </button>
+                    </div>
+                )}
+                </>
             )}
         </section>
     );
